@@ -1,61 +1,175 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fernando Torterolo — Arte Contemporáneo</title>
-  <meta name="description" content="Sitio oficial de Fernando Guillermo Torterolo Arancibia, artista visual chileno. Licenciado en Artes con mención en Pintura. Exposiciones, murales y trayectoria.">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fernando Torterolo — Dossier de Prensa</title>
+  <meta name="description" content="Dossier de prensa del artista chileno Fernando Guillermo Torterolo Arancibia. Bio, statement, obra y contactos." />
+  <link rel="canonical" href="https://fernandotorterolo.art/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Fernando Torterolo — Dossier de Prensa" />
+  <meta property="og:description" content="Bio, statement, obra seleccionada y contacto." />
+  <meta property="og:url" content="https://fernandotorterolo.art/" />
+  <meta property="og:image" content="https://fernandotorterolo.art/assets/Fernando2.JPG" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <style>
+    :root{
+      --ink:#0b0f19; --paper:#ffffff; --muted:#5b6472; --line:#e7ebf0; --accent:#111827; --hilite:#dc2626;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; background:var(--paper); color:var(--ink); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans"}
+    img{max-width:100%; height:auto; display:block}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* Hero con fondo Valparaíso (textura urbana) */
+    .hero{min-height:68vh; display:grid; place-items:center; text-align:center; position:relative; overflow:hidden}
+    .hero::before{content:""; position:absolute; inset:0; background:url('assets/fondoweb.JPG') center/cover no-repeat fixed; filter:grayscale(20%) contrast(1.05);}    
+    .hero::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.55) 40%, rgba(0,0,0,.35) 100%);}    
+    .hero-inner{position:relative; z-index:1; color:#fff; padding:48px 20px}
+    .hero h1{font-size:clamp(2rem,5vw,3.5rem); letter-spacing:.4px; margin:0 0 .5rem}
+    .hero p{max-width:68ch; margin:0 auto; color:#f3f4f6}
+
+    header.sticky{position:sticky; top:0; backdrop-filter:saturate(160%) blur(6px); background:rgba(255,255,255,.85); border-bottom:1px solid var(--line); z-index:20}
+    .container{max-width:1100px; margin:auto; padding:0 20px}
+    .nav{display:flex; align-items:center; justify-content:space-between; height:60px}
+    .brand{font-weight:800; letter-spacing:.5px}
+    .nav a{margin-left:16px; color:var(--muted)}
+
+    main section{padding:64px 0; border-bottom:1px solid var(--line)}
+    h2{font-size:1.6rem; margin:.5rem 0 1rem}
+
+    .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:22px}
+    .col-7{grid-column: span 7}
+    .col-5{grid-column: span 5}
+    .col-6{grid-column: span 6}
+    .col-4{grid-column: span 4}
+    .col-8{grid-column: span 8}
+    @media (max-width:900px){.col-7,.col-5,.col-6,.col-4,.col-8{grid-column:1/-1}}
+
+    .panel{padding:20px; border:1px solid var(--line); border-radius:16px; background:#ffffffd9; backdrop-filter: blur(2px)}
+    .muted{color:var(--muted)}
+
+    .credit{font-size:.85rem; color:var(--muted); margin-top:6px}
+
+    /* Galería mosaico */
+    .mosaic{display:grid; grid-template-columns:repeat(12,1fr); gap:10px}
+    .tile{grid-column: span 6; border-radius:14px; overflow:hidden; border:1px solid var(--line); background:#f9fafb}
+    .tile.tall{grid-column: span 12}
+    @media (max-width:780px){.tile{grid-column: span 12}}
+
+    footer{padding:28px 0; color:var(--muted)}
+  </style>
 </head>
 <body>
-  <header>
-    <h1>Fernando Torterolo</h1>
-    <p>Arte Contemporáneo — Pintura y Muralismo</p>
+  <header class="sticky">
+    <div class="container nav">
+      <div class="brand">Fernando Torterolo</div>
+      <nav>
+        <a href="#statement">Statement</a>
+        <a href="#bio">Bio</a>
+        <a href="#obra">Obra</a>
+        <a href="#prensa">Prensa</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
   </header>
 
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Fernando Torterolo — Dossier de Prensa</h1>
+      <p>Arte contemporáneo desde Valparaíso: pintura expandida, tramas urbanas y materialidades encontradas. Presentación para medios, curadores y espacios culturales.</p>
+    </div>
+  </section>
+
   <main>
-    <!-- Bio -->
+    <section id="statement">
+      <div class="container grid">
+        <div class="col-7">
+          <h2>Statement</h2>
+          <div class="panel">
+            <p>Mi trabajo surge del ritmo de la ciudad-puerto. Recojo superficies y signos —tickets, marcas, fragmentos— y los someto a una trama paciente: cortes mínimos, repeticiones, capas. La imagen aparece como <em>persistencia</em> más que como gesto: una deriva entre cartografía y ruido, donde el tiempo de la urbe queda sedimentado en la pintura.</p>
+            <p class="muted">Líneas, módulos y constelaciones negocian con el azar; el negro y el blanco funcionan como silencios, aberturas sobre un sustrato que registra tránsito, trabajo y memoria.</p>
+          </div>
+        </div>
+        <figure class="col-5">
+          <img src="assets/Fernando2.JPG" alt="Retrato del artista junto a su obra" loading="lazy">
+          <figcaption class="credit">Foto: registro de sala, Valparaíso.</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section id="bio">
-      <h2>Biografía</h2>
-      <p><strong>Fernando Guillermo Torterolo Arancibia</strong> (Rancagua, 1973) es un artista visual chileno con Licenciatura en Artes con mención en Pintura por la Escuela de Bellas Artes de Valparaíso. Su obra explora materiales no convencionales y procesos pictóricos experimentales, con participación en múltiples exposiciones individuales y colectivas en Chile desde 1997.</p>
+      <div class="container grid">
+        <figure class="col-5">
+          <img src="assets/fotobiografia.JPG" alt="Fernando Torterolo en sala" loading="lazy">
+        </figure>
+        <div class="col-7">
+          <h2>Biografía</h2>
+          <div class="panel">
+            <p><strong>Fernando Guillermo Torterolo Arancibia</strong> (Rancagua, 1973) es artista visual chileno. <span class="muted">Licenciatura en Artes con mención en Pintura, Escuela de Bellas Artes de Valparaíso (2010–2016). Residencia en el Parque Cultural de Valparaíso (2013–2014) en el proyecto <em>Catalepsia Pintura Latente II</em>.</span></p>
+            <p>Ha expuesto en la Galería Municipal de Valparaíso, Museo Lord Cochrane, Parque Cultural de Valparaíso y espacios municipales de Rancagua, Viña del Mar y La Serena. Su práctica incluye montaje de exposiciones en PCdV y CENTEX.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Exposiciones -->
-    <section id="exposiciones">
-      <h2>Exposiciones Seleccionadas</h2>
-      <ul>
-        <li>1997 – Exposición individual, Instituto de Normalización Previsional, Rancagua</li>
-        <li>1998 – Exposición individual, Gobernación Regional de Rancagua</li>
-        <li>2013 – “Salón de Alumnos XXXV”, Galería Municipal de Valparaíso</li>
-        <li>2014 – “Fecunda”, Museo Lord Cochrane, Valparaíso</li>
-        <li>2015 – “Salón Nacional de Pintura XXXVIII”, Viña del Mar</li>
-        <li>2017 – “702”, Parque Cultural de Valparaíso</li>
-        <li>2019 – “Pintura en Persistencia”, Parque Cultural de Valparaíso</li>
-        <li>2023 – Exposición histórica de licenciados, Galería Municipal de Artes, Valparaíso</li>
-      </ul>
+    <section id="obra">
+      <div class="container">
+        <h2>Obra seleccionada</h2>
+        <div class="mosaic">
+          <figure class="tile"><img src="assets/obra.JPG" alt="Obra con tramas y marcas" loading="lazy"></figure>
+          <figure class="tile"><img src="assets/obra1.JPG" alt="Geometría circular y líneas" loading="lazy"></figure>
+          <figure class="tile"><img src="assets/obra2.JPG" alt="Superficie modulada en blanco" loading="lazy"></figure>
+          <figure class="tile tall"><img src="assets/muestra4.JPG" alt="Vista de sala con el artista" loading="lazy"></figure>
+          <figure class="tile"><img src="assets/muestra3.JPG" alt="Detalle y patrón gráfico" loading="lazy"></figure>
+        </div>
+        <p class="container muted" style="margin-top:10px">Las imágenes son de registro de sala. Solicitar fotos en alta para prensa.</p>
+      </div>
     </section>
 
-    <!-- Murales -->
-    <section id="murales">
-      <h2>Murales</h2>
-      <ul>
-        <li>2011 – Colegio Monte Castello, Viña del Mar</li>
-        <li>2012 – Escuela E-286, Valparaíso</li>
-        <li>2018 – “El descanso”, Agua Santa, Viña del Mar</li>
-        <li>2018 – Proyecto Ficval “De Muro a Mural”, Cerro San Roque, Valparaíso</li>
-      </ul>
+    <section id="prensa">
+      <div class="container grid">
+        <div class="col-8">
+          <h2>Datos para prensa</h2>
+          <div class="panel">
+            <ul>
+              <li><strong>Ciudad base:</strong> Valparaíso, Chile</li>
+              <li><strong>Formación:</strong> Licenciatura en Artes (Pintura). Residencia PCdV <em>Catalepsia Pintura Latente II</em>.</li>
+              <li><strong>Exposiciones destacadas:</strong> Salón de Alumnos XXXV y XXXVI (Galería Municipal de Valparaíso); Museo Lord Cochrane; Salón Nacional de Pintura XXXVIII (Viña del Mar); exposición histórica de licenciados (2023).</li>
+              <li><strong>Murales:</strong> Colegio Monte Castello (2011), Escuela E-286 (2012), <em>El descanso</em> (2018), FICVAL <em>De Muro a Mural</em> (2018).</li>
+            </ul>
+          </div>
+        </div>
+        <figure class="col-4">
+          <img src="assets/fondo2.JPG" alt="Textura urbana de Valparaíso" loading="lazy">
+          <figcaption class="credit">Texturas urbanas — Valparaíso.</figcaption>
+        </figure>
+      </div>
     </section>
 
-    <!-- Contacto -->
     <section id="contacto">
-      <h2>Contacto</h2>
-      <p>Email: <a href="mailto:fernandotorteroloarancibia@gmail.com">fernandotorteroloarancibia@gmail.com</a></p>
-      <p>Teléfono: +56 9 4656 2365</p>
+      <div class="container grid">
+        <div class="col-6">
+          <h2>Contacto</h2>
+          <div class="panel">
+            <p><strong>Email:</strong> <a href="mailto:fernandotorteroloarancibia@gmail.com">fernandotorteroloarancibia@gmail.com</a></p>
+            <p><strong>Tel:</strong> <a href="tel:+56946562365">+56 9 4656 2365</a></p>
+          </div>
+        </div>
+        <figure class="col-6">
+          <img src="assets/fondo.JPG" alt="Detalle material de obra" loading="lazy">
+        </figure>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Fernando Torterolo. Todos los derechos reservados.</p>
+    <div class="container">
+      <p>© 2025 Fernando Torterolo. Todos los derechos reservados.</p>
+    </div>
   </footer>
 </body>
 </html>
+
