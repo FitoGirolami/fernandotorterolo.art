@@ -79,9 +79,10 @@
     <div class="container nav">
       <div class="brand">Fernando Torterolo</div>
       <nav>
-        <a href="#statement">Statement</a>
+        <a href="#presentacion">Presentación</a>
         <a href="#bio">Bio</a>
         <a href="#obra">Obra</a>
+        <a href="#videos">Videos</a>
         <a href="#prensa">Prensa</a>
         <a href="#contacto">Contacto</a>
       </nav>
@@ -110,12 +111,17 @@
         <figure class="col-5">
           <img src="imagenes/Fernando2.JPG" alt="Retrato del artista junto a su obra" loading="lazy">
           <figcaption class="credit">Registro de sala — Valparaíso.</figcaption>
+
+          <!-- Video complemento, tamaño sutil -->
+          <div style="margin-top:16px; display:grid; place-items:center;">
+            <div class="panel" style="position:relative; width:min(520px, 70%);">
+              <div style="position:relative; width:100%; max-width:520px; aspect-ratio:16/9; margin:0 auto; overflow:hidden; border-radius:12px;">
+                <iframe src="https://www.youtube.com/embed/rTzFAy1-BFE" title="Entrevista ElementalTV a Fernando Torterolo" frameborder="0" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+              </div>
+              <div class="credit" style="text-align:center; margin-top:6px;">Entrevista — ElementalTV</div>
+            </div>
+          </div>
         </figure>
-      </div>
-      <div class="container" style="margin-top:40px">
-        <div class="panel" style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:16px;">
-          <iframe src="https://www.youtube.com/embed/rTzFAy1-BFE" title="Entrevista ElementalTV a Fernando Torterolo" frameborder="0" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
-        </div>
       </div>
     </section>
 
@@ -140,21 +146,78 @@
     </section>
 
     <!-- OBRA SELECCIONADA / DISTRIBUCIÓN EDITORIAL -->
-    <section id="obra">
+    $1
+
+    <!-- VIDEOS -->
+    <section id="videos">
       <div class="container">
-        <h2>Obra seleccionada</h2>
-        <div class="gallery">
-          <figure class="g-item span-12"><img src="imagenes/muestra4.JPG" alt="Vista de sala con obras de gran formato" loading="lazy"><figcaption>Vista de sala — Parque Cultural de Valparaíso</figcaption></figure>
-          <figure class="g-item span-8"><img src="imagenes/obra1.JPG" alt="Geometría circular con líneas verticales" loading="lazy"><figcaption><strong>Código interno</strong> — repetición modular</figcaption></figure>
-          <figure class="g-item span-4"><img src="imagenes/obra2.JPG" alt="Superficie modulada en blanco" loading="lazy"><figcaption><strong>Tiempo en espera</strong> — repetición modular</figcaption></figure>
-          <figure class="g-item span-6"><img src="imagenes/obra.JPG" alt="Trama de pequeños módulos y marcas" loading="lazy"><figcaption><strong>Tránsito</strong> — cartografías del descarte</figcaption></figure>
-          <figure class="g-item span-6"><img src="imagenes/muestra3.JPG" alt="Detalle de patrón y constelaciones" loading="lazy"><figcaption><strong>Periferia (detalle)</strong> — repetición modular</figcaption></figure>
+        <h2>Videos</h2>
+        <div class="grid">
+          <div class="col-6">
+            <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px;">
+              <iframe src="https://www.youtube.com/embed/rTzFAy1-BFE" title="Entrevista ElementalTV" frameborder="0" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+            </div>
+            <p class="credit">Entrevista ElementalTV</p>
+          </div>
+          <div class="col-6">
+            <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px;">
+              <iframe src="https://www.youtube.com/embed/lPqijekU4Kc" title="Participación en La Matriz Cultural" frameborder="0" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+            </div>
+            <p class="credit">Participación en La Matriz Cultural</p>
+          </div>
+          <div class="col-6">
+            <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; margin-top:24px;">
+              <iframe src="https://www.youtube.com/embed/sasBYJWnUvo" title="Otra intervención La Matriz Cultural" frameborder="0" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+            </div>
+            <p class="credit">Otra intervención en La Matriz Cultural</p>
+          </div>
+          <div class="col-6">
+            <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:12px; margin-top:24px;">
+              <iframe src="https://www.youtube.com/embed/6XWS_S8Otzo" title="Colaboración con Pato Cortacorrientes" frameborder="0" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+            </div>
+            <p class="credit">Colaboración con Pato Cortacorrientes (Valparaíso)</p>
+          </div>
         </div>
-        <p class="container muted" style="margin-top:12px">Imágenes de registro. Fotografías en alta disponibles a solicitud.</p>
       </div>
     </section>
 
     <!-- PRENSA / DATOS RÁPIDOS -->
+    <!-- VIDEOS -->
+    <section id="videos">
+      <div class="container">
+        <h2>Videos</h2>
+        <div class="grid" style="gap:18px">
+          <div class="col-6">
+            <div class="panel" style="position:relative; width:100%; aspect-ratio:16/9; overflow:hidden; border-radius:12px;">
+              <iframe src="https://www.youtube.com/embed/rTzFAy1-BFE" title="Entrevista ElementalTV" frameborder="0" allowfullscreen style="position:absolute; inset:0; width:100%; height:100%;"></iframe>
+            </div>
+            <div class="credit">Entrevista — ElementalTV</div>
+          </div>
+
+          <div class="col-6">
+            <div class="panel" style="position:relative; width:100%; aspect-ratio:16/9; overflow:hidden; border-radius:12px;">
+              <iframe src="https://www.youtube.com/embed/lPqijekU4Kc" title="La Matriz Cultural" frameborder="0" allowfullscreen style="position:absolute; inset:0; width:100%; height:100%;"></iframe>
+            </div>
+            <div class="credit">Participación — La Matriz Cultural</div>
+          </div>
+
+          <div class="col-6">
+            <div class="panel" style="position:relative; width:100%; aspect-ratio:16/9; overflow:hidden; border-radius:12px;">
+              <iframe src="https://www.youtube.com/embed/sasBYJWnUvo" title="Otra participación — La Matriz Cultural" frameborder="0" allowfullscreen style="position:absolute; inset:0; width:100%; height:100%;"></iframe>
+            </div>
+            <div class="credit">Otra participación — La Matriz Cultural</div>
+          </div>
+
+          <div class="col-6">
+            <div class="panel" style="position:relative; width:100%; aspect-ratio:16/9; overflow:hidden; border-radius:12px;">
+              <iframe src="https://www.youtube.com/embed/6XWS_S8Otzo" title="Valparaíso con Pato Cortacorrientes" frameborder="0" allowfullscreen style="position:absolute; inset:0; width:100%; height:100%;"></iframe>
+            </div>
+            <div class="credit">Valparaíso — con Pato Cortacorrientes (ElementalTV)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="prensa">
       <div class="container grid">
         <div class="col-8">
