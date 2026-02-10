@@ -1,319 +1,425 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" prefix="og: http://ogp.me/ns# profile: http://ogp.me/ns/profile#">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fernando Torterolo — Sitio Oficial</title>
+  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
 
-  <meta name="description" content="Sitio oficial del artista chileno Fernando Torterolo. Dossier de prensa, statement, biografía, obra seleccionada y contacto." />
-  <link rel="canonical" href="https://fernandotorterolo.art/" />
+  <title>Fernando Torterolo — Portafolio 1</title>
+  <meta name="description" content="Portafolio 1: dossier curatorial y biográfico de Fernando Torterolo. Arte contemporáneo desde Valparaíso: pintura expandida, tramas urbanas y cartografías del descarte." />
+  <link rel="canonical" href="https://fernandotorterolo.art/portafolio1.html" />
 
+  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Fernando Torterolo — Sitio Oficial" />
-  <meta property="og:description" content="Arte contemporáneo desde Valparaíso. Tramas urbanas, materialidades y cartografías del descarte." />
-  <meta property="og:url" content="https://fernandotorterolo.art/" />
+  <meta property="og:title" content="Fernando Torterolo — Portafolio 1" />
+  <meta property="og:description" content="Dossier curatorial y biográfico. Pintura expandida, tramas urbanas y materialidades encontradas." />
+  <meta property="og:url" content="https://fernandotorterolo.art/portafolio1.html" />
   <meta property="og:image" content="https://fernandotorterolo.art/imagenes/fotobiografia.JPG" />
-  <meta property="og:image:secure_url" content="https://fernandotorterolo.art/imagenes/fotobiografia.JPG" />
-  <meta property="og:image:alt" content="Retrato de Fernando Torterolo en sala" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:alt" content="Fernando Torterolo en sala" />
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fernando Torterolo — Portafolio 1" />
+  <meta name="twitter:description" content="Dossier curatorial y biográfico. Arte contemporáneo desde Valparaíso." />
   <meta name="twitter:image" content="https://fernandotorterolo.art/imagenes/fotobiografia.JPG" />
-  <meta name="twitter:title" content="Fernando Torterolo — Sitio Oficial" />
-  <meta name="twitter:description" content="Arte contemporáneo desde Valparaíso. Tramas urbanas, materialidades y cartografías del descarte." />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Fernando Guillermo Torterolo Arancibia",
+    "alternateName":"Fernando Torterolo",
+    "birthPlace":{"@type":"Place","name":"Rancagua, Chile"},
+    "birthDate":"1973",
+    "jobTitle":"Artista visual",
+    "address":{"@type":"PostalAddress","addressLocality":"Valparaíso","addressCountry":"CL"},
+    "url":"https://fernandotorterolo.art/",
+    "image":"https://fernandotorterolo.art/imagenes/fotobiografia.JPG",
+    "email":"mailto:Fernandotorterolo73arte@gmail.com",
+    "telephone":"+56 9 4656 2365"
+  }
+  </script>
 
   <style>
     :root{
-      --ink:#0b0f19; --paper:#ffffff; --muted:#5b6472; --line:#e7ebf0; --accent:#111827;
+      --ink:#0b0f19;
+      --paper:#ffffff;
+      --muted:#5b6472;
+      --line:#e7ebf0;
+      --accent:#111827;
+      --chip:#f3f4f6;
     }
     *{box-sizing:border-box}
-    html,body{margin:0; padding:0; background:var(--paper); color:var(--ink); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans"}
-    img{max-width:100%; height:auto; display:block}
-    a{color:var(--accent); text-decoration:none}
+    html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans";}
+    a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
+    img{max-width:100%;height:auto;display:block}
 
-    header.sticky{position:sticky; top:0; backdrop-filter:saturate(160%) blur(6px); background:rgba(255,255,255,.85); border-bottom:1px solid var(--line); z-index:20}
-    .container{max-width:1200px; margin:auto; padding:0 20px}
-    .nav{display:flex; align-items:center; justify-content:space-between; height:60px}
-    .brand{font-weight:800; letter-spacing:.5px}
-    .nav a{margin-left:16px; color:var(--muted)}
+    header.sticky{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:saturate(160%) blur(8px);
+      background:rgba(255,255,255,.88);
+      border-bottom:1px solid var(--line);
+    }
+    .container{max-width:1100px;margin:auto;padding:0 18px}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:14px}
+    .brand{font-weight:800;letter-spacing:.3px}
+    .navlinks{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
+    .navlinks a{color:var(--muted);font-size:.95rem}
+    .btn{
+      display:inline-block;padding:10px 14px;border:1px solid var(--line);
+      border-radius:999px;background:#fff;
+    }
 
-    /* HERO */
-    .hero{min-height:80vh; display:grid; place-items:center; text-align:center; position:relative; overflow:hidden}
-    .hero::before{content:""; position:absolute; inset:0; background:url('imagenes/fondoweb.JPG') center/cover no-repeat fixed; filter:grayscale(15%) contrast(1.05)}
-    .hero::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,.6) 50%, rgba(0,0,0,.35) 100%)}
-    .hero-inner{position:relative; z-index:1; color:#fff; padding:58px 20px}
-    .hero h1{font-size:clamp(2rem,5vw,3.6rem); margin:0 0 .6rem}
-    .hero p{max-width:72ch; margin:0 auto 1rem; color:#e5e7eb}
-    .cta{display:inline-block; padding:12px 18px; border:1px solid #fff; border-radius:999px}
+    .hero{
+      position:relative;overflow:hidden;
+      padding:64px 0 44px;
+      border-bottom:1px solid var(--line);
+    }
+    .hero::before{
+      content:"";position:absolute;inset:0;
+      background:url("imagenes/fondoweb.JPG") center/cover no-repeat fixed;
+      filter:grayscale(15%) contrast(1.05);
+      opacity:.22;
+    }
+    .hero-inner{position:relative}
+    .kicker{color:var(--muted);font-weight:600;letter-spacing:.2px}
+    h1{margin:.5rem 0 0.7rem;font-size:clamp(2rem,4vw,3rem);line-height:1.1}
+    .lead{max-width:78ch;color:#1f2937;font-size:1.05rem;line-height:1.65}
+    .meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .chip{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:7px 10px;border-radius:999px;background:var(--chip);
+      color:#111827;font-size:.92rem;border:1px solid #e5e7eb;
+    }
 
-    main section{padding:70px 0; border-bottom:1px solid var(--line)}
-    h2{font-size:1.65rem; margin:.5rem 0 1rem}
+    main section{padding:56px 0;border-bottom:1px solid var(--line)}
+    h2{margin:0 0 14px;font-size:1.55rem}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
+    .col-7{grid-column:span 7}
+    .col-5{grid-column:span 5}
+    .col-12{grid-column:span 12}
+    @media (max-width:960px){
+      .col-7,.col-5{grid-column:1/-1}
+      .nav{height:auto;padding:12px 0}
+    }
 
-    /* GRID helpers */
-    .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:24px}
-    .col-7{grid-column: span 7}
-    .col-5{grid-column: span 5}
-    .col-6{grid-column: span 6}
-    .col-4{grid-column: span 4}
-    .col-8{grid-column: span 8}
-    @media (max-width:980px){.col-7,.col-5,.col-6,.col-4,.col-8{grid-column:1/-1}}
-
-    .panel{padding:22px; border:1px solid var(--line); border-radius:16px; background:#ffffffdd; backdrop-filter: blur(2px)}
+    .panel{
+      background:#ffffffdd;border:1px solid var(--line);
+      border-radius:16px;padding:20px;
+      backdrop-filter: blur(2px);
+    }
     .muted{color:var(--muted)}
-    .credit{font-size:.85rem; color:var(--muted); margin-top:6px}
+    .credit{font-size:.9rem;color:var(--muted);margin-top:8px}
+    .list{margin:0;padding-left:18px;line-height:1.7}
+    .list li{margin:6px 0}
 
-    /* GALERÍA */
-    .gallery{display:grid; grid-template-columns:repeat(12,1fr); gap:12px}
-    .g-item{position:relative; overflow:hidden; border-radius:14px; border:1px solid var(--line); background:#f9fafb}
-    .g-item figcaption{position:absolute; left:0; bottom:0; width:100%; background:linear-gradient(180deg, transparent, rgba(0,0,0,.65)); color:#fff; padding:38px 14px 10px; font-size:.95rem}
-    .span-12{grid-column:span 12}
-    .span-8{grid-column:span 8}
-    .span-6{grid-column:span 6}
-    .span-4{grid-column:span 4}
-    @media (max-width:980px){.span-8,.span-6,.span-4{grid-column:span 12}}
+    .keygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    @media (max-width:960px){.keygrid{grid-template-columns:1fr}}
+    .key{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}
+    .key strong{display:block;margin-bottom:6px}
+    .tagset{display:flex;flex-wrap:wrap;gap:8px}
+    .tag{font-size:.9rem;border:1px solid var(--line);padding:7px 10px;border-radius:999px;background:#fff}
 
-    footer{padding:28px 0; color:var(--muted)}
+    footer{padding:28px 0;color:var(--muted);text-align:center}
+    .small{font-size:.92rem}
+    .sr-only{position:absolute;left:-9999px}
   </style>
 </head>
+
 <body>
   <header class="sticky">
     <div class="container nav">
       <div class="brand">Fernando Torterolo</div>
-      <nav>
-        <a href="#presentacion">Presentación</a>
-        <a href="#bio">Bio</a>
-        <a href="#obra">Obra</a>
-        <a href="#videos">Videos</a>
-        <a href="#prensa">Prensa</a>
-        <a href="#contacto">Contacto</a>
+      <nav class="navlinks" aria-label="Navegación">
+        <a href="#ficha">Ficha</a>
+        <a href="#bio">Biografía</a>
+        <a href="#ejes">Ejes</a>
+        <a href="#territorio">Territorio</a>
+        <a href="#estetica">Estética</a>
+        <a href="#curatorial">Curatorial</a>
+        <a href="#keywords">Palabras clave</a>
+        <a class="btn" href="#contacto">Contacto</a>
       </nav>
     </div>
   </header>
 
   <section class="hero">
-    <div class="hero-inner">
+    <div class="container hero-inner">
+      <div class="kicker">Portafolio 1 · Dossier curatorial y biográfico</div>
       <h1>Arte contemporáneo desde Valparaíso</h1>
-      <p>Pintura expandida, tramas urbanas y materialidades encontradas. Cartografías del descarte en diálogo con la ciudad-puerto.</p>
-      <a class="cta" href="#prensa">Dossier de prensa</a>
+      <p class="lead">
+        Pintura expandida, tramas urbanas y materialidades encontradas. Cartografías del descarte en diálogo con la ciudad-puerto.
+      </p>
+
+      <div class="meta-row" role="list" aria-label="Metadatos rápidos">
+        <span class="chip" role="listitem"><strong>Ciudad base:</strong>&nbsp;Valparaíso, Chile</span>
+        <span class="chip" role="listitem"><strong>Nacimiento:</strong>&nbsp;Rancagua, Chile · 1973</span>
+        <span class="chip" role="listitem"><strong>Disciplina:</strong>&nbsp;Artes visuales</span>
+        <span class="chip" role="listitem"><strong>Formación:</strong>&nbsp;Lic. en Artes (Pintura), 2010–2016</span>
+      </div>
     </div>
   </section>
 
   <main>
-    <!-- STATEMENT + RETRATO -->
-    <section id="presentacion">
+    <!-- FICHA -->
+    <section id="ficha">
       <div class="container grid">
         <div class="col-7">
-          <h2>Presentación</h2>
+          <h2>Ficha de identificación</h2>
           <div class="panel">
-            <p>Mi práctica nace del ritmo de la ciudad-puerto. Recojo superficies y signos —boletos, marcas, colillas— para someterlos a una trama paciente: cortes mínimos, repeticiones, capas. La imagen aparece como persistencia más que como gesto; cartografía y ruido superpuestos en una misma superficie.</p>
-            <p class="muted">Líneas, módulos y constelaciones negocian con el azar. El negro y el blanco funcionan como silencios sobre un sustrato que registra tránsito, trabajo y memoria del territorio.</p>
+            <div class="keygrid" aria-label="Ficha">
+              <div class="key">
+                <strong>Nombre completo</strong>
+                <div>Fernando Guillermo Torterolo Arancibia</div>
+              </div>
+              <div class="key">
+                <strong>Lugar y año de nacimiento</strong>
+                <div>Rancagua, Chile, 1973</div>
+              </div>
+              <div class="key">
+                <strong>Ciudad base</strong>
+                <div>Valparaíso, Chile</div>
+              </div>
+              <div class="key">
+                <strong>Disciplina</strong>
+                <div>Artes visuales</div>
+              </div>
+              <div class="key">
+                <strong>Formación</strong>
+                <div>Licenciatura en Artes, mención Pintura (2010–2016)</div>
+              </div>
+              <div class="key">
+                <strong>Institución</strong>
+                <div>Escuela de Bellas Artes de Valparaíso</div>
+              </div>
+            </div>
           </div>
         </div>
-        <figure class="col-5">
-          <img src="imagenes/Fernando2.JPG" alt="Retrato del artista junto a su obra" loading="lazy">
-          <figcaption class="credit">Registro de sala — Valparaíso.</figcaption>
-        </figure>
+
+        <div class="col-5">
+          <h2 class="sr-only">Imagen</h2>
+          <div class="panel">
+            <img src="imagenes/fotobiografia.JPG" alt="Fernando Torterolo en sala" loading="lazy" />
+            <div class="credit">Registro de sala.</div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- BIOGRAFÍA + FOTO -->
+    <!-- BIO -->
     <section id="bio">
       <div class="container grid">
-        <figure class="col-5">
-          <img src="imagenes/fotobiografia.JPG" alt="Fernando Torterolo en sala" loading="lazy">
-        </figure>
         <div class="col-7">
-          <h2>Biografía</h2>
+          <h2>Síntesis biográfica</h2>
           <div class="panel">
-            <p><strong>Fernando Guillermo Torterolo Arancibia</strong> (Rancagua, Chile, 1973) es artista visual con una trayectoria marcada por la exploración de la pintura y el muralismo en diálogo con la ciudad-puerto de Valparaíso. Su práctica se caracteriza por el uso de materiales de descarte —colillas, boletos, papeles y fragmentos urbanos— que son sometidos a procesos de repetición, corte y persistencia, convirtiendo lo efímero en cartografía pictórica.</p>
-            <p>Estudió en la <em>Escuela de Bellas Artes de Valparaíso</em>, obteniendo la Licenciatura en Artes con mención en Pintura (2010–2016). Entre 2013 y 2014 participó en la residencia <em>Catalepsia Pintura Latente II</em> en el Parque Cultural de Valparaíso, dirigida por Henry Serrano, Francisco Olivares y Justo Pastor Mellado, experiencia que consolidó su búsqueda en torno a los procesos pictóricos como registro de la urbe.</p>
-            <p>Ha expuesto en la Galería Municipal de Valparaíso, Museo Lord Cochrane, Parque Cultural de Valparaíso, Salón Nacional de Pintura de Viña del Mar, y en instancias en Rancagua y La Serena. En 2019 presentó <em>Pintura en Persistencia</em> en el Parque Cultural de Valparaíso, proyecto que profundizó en la relación entre tiempo, memoria y superficie. En 2023 formó parte de la exposición histórica de licenciados de la Escuela de Bellas Artes de Valparaíso.</p>
-            <p>Su experiencia mural abarca proyectos comunitarios y obras en espacios públicos: Colegio Monte Castello (2011), Escuela E-286 en Población Juan Montedónico (2012), <em>El descanso</em> en Agua Santa, Viña del Mar (2018), y la participación en el proyecto FICVAL <em>De Muro a Mural</em> en el Cerro San Roque, Valparaíso (2018).</p>
-            <p>Además de su labor artística, ha colaborado en montajes y proyectos culturales en el Parque Cultural de Valparaíso (PCdV) y CENTEX del Ministerio de las Culturas, las Artes y el Patrimonio. Su obra, descrita como una cartografía del descarte y la memoria, articula lo urbano y lo íntimo, generando un lenguaje que transita entre la abstracción, la repetición y la huella del tiempo.</p>
-            <p class="muted">Actualmente vive y trabaja en Valparaíso, Chile.</p>
+            <p>
+              Fernando Torterolo es artista visual chileno cuya trayectoria se desarrolla en diálogo con la ciudad-puerto de Valparaíso.
+              Su práctica se inscribe en la exploración de la pintura y el muralismo a partir del uso de materialidades encontradas
+              en el espacio urbano: colillas de cigarrillos, boletos, papeles y fragmentos de circulación cotidiana.
+            </p>
+            <p>
+              Estudió en la Escuela de Bellas Artes de Valparaíso, donde obtuvo la Licenciatura en Artes con mención en Pintura (2010–2016).
+              Entre 2013 y 2014 participó en la residencia <em>Catalepsia Pintura Latente II</em> en el Parque Cultural de Valparaíso,
+              dirigida por Henry Serrano, Francisco Olivares y Justo Pastor Mellado.
+            </p>
+            <p>
+              Ha expuesto en la Galería Municipal de Valparaíso, Museo Lord Cochrane, Parque Cultural de Valparaíso,
+              Salón Nacional de Pintura de Viña del Mar, y en instancias en Rancagua y La Serena. En 2019 presentó
+              <em>Pintura en Persistencia</em> en el Parque Cultural de Valparaíso. En 2023 formó parte de la exposición histórica
+              de licenciados de la Escuela de Bellas Artes de Valparaíso.
+            </p>
+            <p>
+              Su experiencia mural abarca proyectos comunitarios y obras en espacios públicos:
+              Colegio Monte Castello (2011), Escuela E-286 en Población Juan Montedónico (2012),
+              <em>El descanso</em> en Agua Santa, Viña del Mar (2018), y participación en el proyecto FICVAL
+              <em>De Muro a Mural</em> en el Cerro San Roque, Valparaíso (2018).
+            </p>
+            <p>
+              Además de su labor artística, ha colaborado en montajes y proyectos culturales en el Parque Cultural de Valparaíso (PCdV)
+              y en CENTEX del Ministerio de las Culturas, las Artes y el Patrimonio.
+            </p>
+            <p class="muted"><strong>Actualmente</strong> vive y trabaja en Valparaíso, Chile.</p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- OBRA - ÍNDICE -->
-    <section id="obra" style="scroll-margin-top:80px">
-      <div class="container">
-        <h2>Obra</h2>
-        <div class="panel">
-          <p>Selección de obras que trabajan con materialidades encontradas y sistemas de organización social, desde la colilla de cigarrillo hasta el ticket de espera y la tarjeta de estacionamiento.</p>
-          <ul>
-            <li><a href="#transito">“TRANSITO” — Cartografía del Descarte</a></li>
-            <li><a href="#tiempo-espera">“Tiempo y Espera”</a></li>
-            <li><a href="#codigo-interno">“Código Interno”</a></li>
-            <li><a href="#opticos">“Ópticos”</a></li>
-          </ul>
-          <p class="muted">Cada enlace puede vincularse a un código QR específico en sala, dirigido a esta página.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- OBRA 1: TRANSITO -->
-    <section id="transito" style="scroll-margin-top:80px">
-      <div class="container">
-        <h2>“TRANSITO” — Cartografía del Descarte</h2>
-        <div class="panel">
-          <p><strong>“TRANSITO” propone una reflexión profunda</strong> sobre la relación entre el individuo y el paisaje urbano. A través de la acumulación de colillas de cigarrillos, se construye una cartografía que registra la presencia en un momento y lugar específicos.</p>
-
-          <h3 style="margin:1rem 0 .5rem; font-size:1.1rem">La colilla como registro</h3>
-          <p>Cada colilla funciona como un contenedor de información: genética, desgaste, oxidación. Narra la historia de un instante. La composición se forma superponiendo cada elemento en lo que denomino <strong>repetición modular</strong>, creando una cartografía donde la colilla ocupa el papel de elemento pictórico.</p>
-
-          <h3 style="margin:1rem 0 .5rem; font-size:1.1rem">Capas, huellas y desplazamiento</h3>
-          <ul>
-            <li><strong>Labial:</strong> las marcas de labial revelan experiencias y presencias femeninas dentro del paisaje.</li>
-            <li><strong>Manchas:</strong> huellas que señalan gestos, encuentros y accidentes que inscriben un momento en el tiempo.</li>
-            <li><strong>Publicidad:</strong> fragmentos que se convierten en espejo de una sociedad consumista y de cómo nos relacionamos con la información.</li>
-            <li><strong>Traslado y memoria:</strong> como objetos efímeros, las colillas viajan de un lugar a otro, llevando consigo la memoria del instante.</li>
-          </ul>
-
-          <p class="muted" style="margin-top:.8rem">Obra enlazable: por ejemplo, código QR apuntando a <code>https://fernandotorterolo.art/#transito</code>.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- OBRA 2: Tiempo y Espera -->
-    <section id="tiempo-espera" style="scroll-margin-top:80px">
-      <div class="container">
-        <h2>“Tiempo y Espera”</h2>
-        <div class="panel">
-          <p>En mi recorrido por la ciudad me encuentro con los tickets de espera utilizados en locales comerciales para gestionar el flujo de personas. Estos pequeños papeles representan un sistema de organización que otorga un número y un instante en el tiempo, direccionando nuestra experiencia dentro de un sistema social más amplio.</p>
-          <p>La obra se construye como una composición que refleja las distintas direcciones de la comunicación global dentro de ese sistema social. Los tickets se convierten en símbolo de la interacción entre el individuo y la sociedad: registros mínimos que ordenan, distribuyen y administran nuestra presencia en la ciudad.</p>
-          <p class="muted" style="margin-top:.8rem">Obra enlazable: por ejemplo, código QR apuntando a <code>https://fernandotorterolo.art/#tiempo-espera</code>.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- OBRA 3: Código Interno -->
-    <section id="codigo-interno" style="scroll-margin-top:80px">
-      <div class="container">
-        <h2>“Código Interno”</h2>
-        <div class="panel">
-          <p>En esta obra se explora la relación entre el individuo y el sistema, trasladando el territorio al plano mediante el uso de <strong>tarjetas de estacionamiento</strong> como elemento y código visual.</p>
-          <p>La obra se convierte en una metáfora de la manera en que el sistema nos condiciona y nos controla a través de números y códigos. La repetición de las tarjetas genera un patrón visual que refuerza la idea de la omnipresencia del sistema en nuestras vidas.</p>
-          <p>Al mismo tiempo, la obra invita a reflexionar sobre cómo nos sometemos a estos códigos y números sin cuestionarlos, aceptando su lógica como parte natural del paisaje urbano y de nuestra experiencia cotidiana.</p>
-          <p class="muted" style="margin-top:.8rem">Obra enlazable: por ejemplo, código QR apuntando a <code>https://fernandotorterolo.art/#codigo-interno</code>.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- OBRA 4: Ópticos -->
-    <section id="opticos" style="scroll-margin-top:80px">
-      <div class="container">
-        <h2>“Ópticos”</h2>
-        <div class="panel">
-          <p>Realizadas en el año 2014, estas obras surgen de la necesidad de otorgar un mayor valor visual al trabajo plástico. El proceso comienza con la recolección de colillas para trasladarlas al soporte, siempre desde una mirada vinculada a la pintura y a sus posibilidades expresivas.</p>
-          <p>Este ejercicio nace de la observación de materiales insalubres y de la intención de concederles una estética distinta. La obra propone una reflexión sobre cómo elementos considerados desechos pueden reorganizarse para adquirir nuevas lecturas visuales y simbólicas.</p>
-          <p class="muted" style="margin-top:.8rem">Obra enlazable: por ejemplo, código QR apuntando a <code>https://fernandotorterolo.art/#opticos</code>.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOTOS -->
-    <section id="fotos">
-      <div class="container">
-        <h2>Fotos</h2>
-        <div class="gallery">
-          <figure class="g-item span-12"><img src="imagenes/muestra4.JPG" alt="Vista de sala" loading="lazy"></figure>
-          <figure class="g-item span-8"><img src="imagenes/obra1.JPG" alt="Obra 1" loading="lazy"></figure>
-          <figure class="g-item span-4"><img src="imagenes/obra2.JPG" alt="Obra 2" loading="lazy"></figure>
-          <figure class="g-item span-6"><img src="imagenes/obra.JPG" alt="Obra 3" loading="lazy"></figure>
-          <figure class="g-item span-6"><img src="imagenes/muestra3.JPG" alt="Detalle de obra" loading="lazy"></figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- VIDEOS -->
-    <section id="videos">
-      <div class="container">
-        <h2>Videos</h2>
-        <div class="grid" style="gap:18px">
-          <div class="col-6">
-            <div class="panel" style="position:relative; width:100%; aspect-ratio:16/9; overflow:hidden; border-radius:12px;">
-              <iframe src="https://www.youtube.com/embed/rTzFAy1-BFE" title="Entrevista — ElementalTV" frameborder="0" allowfullscreen style="position:absolute; inset:0; width:100%; height:100%;"></iframe>
-            </div>
-            <div class="credit">Entrevista — ElementalTV</div>
-          </div>
-
-          <div class="col-6">
-            <div class="panel" style="position:relative; width:100%; aspect-ratio:16/9; overflow:hidden; border-radius:12px;">
-              <iframe src="https://www.youtube.com/embed/lPqijekU4Kc" title="Participación — La Matriz Cultural" frameborder="0" allowfullscreen style="position:absolute; inset:0; width:100%; height:100%;"></iframe>
-            </div>
-            <div class="credit">Participación — La Matriz Cultural</div>
-          </div>
-
-          <div class="col-6">
-            <div class="panel" style="position:relative; width:100%; aspect-ratio:16/9; overflow:hidden; border-radius:12px;">
-              <iframe src="https://www.youtube.com/embed/sasBYJWnUvo" title="Otra participación — La Matriz Cultural" frameborder="0" allowfullscreen style="position:absolute; inset:0; width:100%; height:100%;"></iframe>
-            </div>
-            <div class="credit">Otra participación — La Matriz Cultural</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRENSA -->
-    <section id="prensa">
-      <div class="container grid">
-        <div class="col-8">
-          <h2>Dossier para prensa</h2>
+        <div class="col-5">
+          <h2>Resumen de prensa</h2>
           <div class="panel">
-            <ul>
+            <ul class="list">
               <li><strong>Ciudad base:</strong> Valparaíso, Chile</li>
               <li><strong>Formación:</strong> Licenciatura en Artes (Pintura). Residencia PCdV <em>Catalepsia Pintura Latente II</em>.</li>
-              <li><strong>Exposiciones destacadas:</strong> Salón de Alumnos XXXV–XXXIX (Galería Municipal de Valparaíso); Museo Lord Cochrane; Salón Nacional de Pintura XXXVIII (Viña del Mar); ciclo <em>Pintura en Persistencia</em> (PCdV, 2019); exposición histórica de licenciados (2023).</li>
-              <li><strong>Murales:</strong> Colegio Monte Castello (2011), Escuela E-286 (2012), <em>El descanso</em> (2018), FICVAL <em>De Muro a Mural</em> (2018).</li>
-              <li><strong>Contacto prensa:</strong> <a href="mailto:Fernandotorterolo73arte@gmail.com">Fernandotorterolo73arte@gmail.com</a> · <a href="tel:+56946562365">+56 9 4656 2365</a></li>
+              <li>
+                <strong>Exposiciones destacadas:</strong>
+                Galería Municipal de Valparaíso (Salón de Alumnos XXXV–XXXIX);
+                Museo Lord Cochrane; Salón Nacional de Pintura XXXVIII (Viña del Mar);
+                ciclo <em>Pintura en Persistencia</em> (PCdV, 2019);
+                exposición histórica de licenciados (2023).
+              </li>
+              <li>
+                <strong>Murales:</strong>
+                Colegio Monte Castello (2011), Escuela E-286 (2012), <em>El descanso</em> (2018),
+                FICVAL <em>De Muro a Mural</em> (2018).
+              </li>
             </ul>
-            <p style="margin-top:10px"><a href="#contacto">Solicitar dossier PDF y fotos en alta</a></p>
           </div>
         </div>
-        <figure class="col-4">
-          <img src="imagenes/fondo2.JPG" alt="Textura urbana" loading="lazy">
-          <figcaption class="credit">Texturas urbanas.</figcaption>
-        </figure>
+      </div>
+    </section>
+
+    <!-- EJES -->
+    <section id="ejes">
+      <div class="container">
+        <h2>Ejes conceptuales y líneas de trabajo</h2>
+        <div class="panel">
+          <div class="tagset" aria-label="Ejes">
+            <span class="tag">Pintura expandida</span>
+            <span class="tag">Tramas urbanas</span>
+            <span class="tag">Materialidades encontradas</span>
+            <span class="tag">Cartografías del descarte</span>
+            <span class="tag">Repetición modular</span>
+            <span class="tag">Persistencia</span>
+            <span class="tag">Tiempo</span>
+            <span class="tag">Memoria</span>
+            <span class="tag">Sistemas de organización social</span>
+            <span class="tag">Códigos urbanos</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TERRITORIO -->
+    <section id="territorio">
+      <div class="container grid">
+        <div class="col-7">
+          <h2>Relación entre obra, territorio y contexto</h2>
+          <div class="panel">
+            <p>
+              La práctica de Fernando Torterolo se articula desde el ritmo y la materialidad de la ciudad-puerto de Valparaíso.
+              El territorio urbano se presenta como fuente directa de signos y registros de tránsito, trabajo y memoria.
+            </p>
+            <p>
+              Boletos, colillas, tickets de espera y tarjetas de estacionamiento se integran como unidades visuales,
+              vinculadas a experiencias individuales y a sistemas cotidianos de organización social.
+            </p>
+            <p>
+              La ciudad se manifiesta como superficie activa donde el azar, el desplazamiento y la acumulación configuran cartografías pictóricas.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-5">
+          <h2>Materialidades registradas</h2>
+          <div class="panel">
+            <ul class="list">
+              <li>Colillas de cigarrillos</li>
+              <li>Boletos y papeles urbanos</li>
+              <li>Tickets de espera</li>
+              <li>Tarjetas de estacionamiento</li>
+              <li>Fragmentos gráficos y signos del tránsito</li>
+            </ul>
+            <p class="muted small" style="margin-top:12px">
+              Estos elementos se integran a procesos de repetición, corte y persistencia, y se organizan como cartografías pictóricas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ESTÉTICA -->
+    <section id="estetica">
+      <div class="container">
+        <h2>Enfoque estético y materialidad</h2>
+        <div class="panel">
+          <p>
+            El enfoque estético se apoya en procesos pacientes de corte, repetición y superposición. Líneas, módulos y constelaciones
+            organizan materialidades de descarte sobre el soporte pictórico.
+          </p>
+          <p>
+            El negro y el blanco operan como silencios visuales sobre un sustrato que registra tránsito, trabajo y memoria del territorio.
+          </p>
+
+          <hr style="border:none;border-top:1px solid var(--line);margin:18px 0" />
+
+          <h3 style="margin:0 0 10px;font-size:1.1rem">Series / núcleos presentes en el sitio</h3>
+          <ul class="list">
+            <li><strong>“TRANSITO” — Cartografía del Descarte:</strong> acumulación y repetición modular de colillas como elemento pictórico.</li>
+            <li><strong>“Tiempo y Espera”:</strong> tickets de espera como registro de sistemas de organización social.</li>
+            <li><strong>“Código Interno”:</strong> tarjetas de estacionamiento como código visual y patrón repetido.</li>
+            <li><strong>“Ópticos” (2014):</strong> recolección de colillas y traslado al soporte desde una mirada vinculada a la pintura.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURATORIAL -->
+    <section id="curatorial">
+      <div class="container">
+        <h2>Declaración curatorial breve</h2>
+        <div class="panel">
+          <p>
+            La obra de Fernando Torterolo construye cartografías visuales a partir de restos urbanos y sistemas cotidianos de organización social.
+            Mediante la repetición y la persistencia, transforma materiales efímeros en superficies de memoria, donde el territorio, el tiempo y
+            la experiencia urbana se inscriben como tramas pictóricas activas.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEYWORDS -->
+    <section id="keywords">
+      <div class="container">
+        <h2>Palabras clave para archivo y búsqueda</h2>
+        <div class="panel">
+          <div class="tagset" aria-label="Palabras clave">
+            <span class="tag">Fernando Torterolo</span>
+            <span class="tag">arte contemporáneo chileno</span>
+            <span class="tag">Valparaíso</span>
+            <span class="tag">pintura expandida</span>
+            <span class="tag">cartografías urbanas</span>
+            <span class="tag">materialidades encontradas</span>
+            <span class="tag">descarte</span>
+            <span class="tag">repetición modular</span>
+            <span class="tag">memoria urbana</span>
+            <span class="tag">pintura y territorio</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- CONTACTO -->
     <section id="contacto">
       <div class="container grid">
-        <div class="col-6">
+        <div class="col-7">
           <h2>Contacto</h2>
           <div class="panel">
             <p><strong>Email:</strong> <a href="mailto:Fernandotorterolo73arte@gmail.com">Fernandotorterolo73arte@gmail.com</a></p>
             <p><strong>Tel:</strong> <a href="tel:+56946562365">+56 9 4656 2365</a></p>
+            <p class="muted small" style="margin-top:12px">
+              Este portafolio está diseñado para uso editorial, institucional y de archivo.
+            </p>
           </div>
         </div>
-        <figure class="col-6">
-          <img src="imagenes/fondo.JPG" alt="Detalle material de obra" loading="lazy">
-        </figure>
-      </div>
-    </section>
 
-    <!-- VIDEO ENTREVISTA (opcional: si ya tienes sección Videos, esta puede omitirse) -->
-    <section id="video">
-      <div class="container">
-        <h2>Entrevista / Video destacado</h2>
-        <div class="panel" style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:16px;">
-          <iframe src="https://www.youtube.com/embed/rTzFAy1-BFE" title="Entrevista ElementalTV a Fernando Torterolo" frameborder="0" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+        <div class="col-5">
+          <h2>Imagen</h2>
+          <div class="panel">
+            <img src="imagenes/Fernando2.JPG" alt="Retrato del artista junto a su obra" loading="lazy" />
+            <div class="credit">Registro de sala — Valparaíso.</div>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container" style="text-align:center; font-size:.9rem; color:#555;">
-      <p>© 2025 Fernando Torterolo. Todos los derechos reservados.</p>
-      <p>Desarrollado por <a href="https://www.fitogirolami.art" target="_blank" style="color:#111; font-weight:600;">fitogirolami.art</a></p>
+    <div class="container">
+      <div class="small">© 2025 Fernando Torterolo. Todos los derechos reservados.</div>
+      <div class="small">Desarrollado por <a href="https://www.fitogirolami.art" target="_blank" rel="noopener">fitogirolami.art</a></div>
     </div>
   </footer>
 </body>
 </html>
+
