@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fernando Torterolo — Official Website</title>
+
+  <meta name="description" content="Official website of Chilean artist Fernando Torterolo. Press dossier, artist statement, biography, selected works and contact information." />
+  <link rel="canonical" href="https://fernandotorterolo.art/en/" />
+  <link rel="alternate" hreflang="es" href="https://fernandotorterolo.art/" />
+  <link rel="alternate" hreflang="en" href="https://fernandotorterolo.art/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://fernandotorterolo.art/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="es_CL" />
+  <meta property="og:title" content="Fernando Torterolo — Official Website" />
+  <meta property="og:description" content="Contemporary art from Valparaíso. Urban patterns, found materials and cartographies of discarded matter." />
+  <meta property="og:url" content="https://fernandotorterolo.art/en/" />
+  <meta property="og:image" content="https://fernandotorterolo.art/imagenes/fotobiografia.JPG" />
+  <meta property="og:image:secure_url" content="https://fernandotorterolo.art/imagenes/fotobiografia.JPG" />
+  <meta property="og:image:alt" content="Fernando Torterolo in an exhibition space" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://fernandotorterolo.art/imagenes/fotobiografia.JPG" />
+  <meta name="twitter:title" content="Fernando Torterolo — Official Website" />
+  <meta name="twitter:description" content="Contemporary art from Valparaíso. Urban patterns, found materials and cartographies of discarded matter." />
+
+  <style>
+    :root{
+      --ink:#0b0f19; --paper:#ffffff; --muted:#5b6472; --line:#e7ebf0; --accent:#111827;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0; padding:0; background:var(--paper); color:var(--ink); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans"}
+    img{max-width:100%; height:auto; display:block}
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    header.sticky{position:sticky; top:0; backdrop-filter:saturate(160%) blur(6px); background:rgba(255,255,255,.85); border-bottom:1px solid var(--line); z-index:20}
+    .container{max-width:1200px; margin:auto; padding:0 20px}
+    .nav{display:flex; align-items:center; justify-content:space-between; min-height:60px}
+    .brand{font-weight:800; letter-spacing:.5px}
+    .nav nav{display:flex; align-items:center; flex-wrap:wrap; justify-content:flex-end; padding:10px 0}
+    .nav a{margin-left:16px; color:var(--muted)}
+    .language-link{font-weight:800; border-left:1px solid var(--line); padding-left:16px}
+
+    /* HERO */
+    .hero{min-height:80vh; display:grid; place-items:center; text-align:center; position:relative; overflow:hidden}
+    .hero::before{content:""; position:absolute; inset:0; background:url('../imagenes/fondoweb.JPG') center/cover no-repeat fixed; filter:grayscale(15%) contrast(1.05)}
+    .hero::after{content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,.6) 50%, rgba(0,0,0,.35) 100%)}
+    .hero-inner{position:relative; z-index:1; color:#fff; padding:58px 20px}
+    .hero h1{font-size:clamp(2rem,5vw,3.6rem); margin:0 0 .6rem}
+    .hero p{max-width:72ch; margin:0 auto 1rem; color:#e5e7eb}
+    .cta{display:inline-block; padding:12px 18px; border:1px solid #fff; border-radius:999px}
+
+    main section{padding:70px 0; border-bottom:1px solid var(--line)}
+    h2{font-size:1.65rem; margin:.5rem 0 1rem}
+
+    /* GRID helpers */
+    .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:24px}
+    .col-7{grid-column: span 7}
+    .col-5{grid-column: span 5}
+    .col-6{grid-column: span 6}
+    .col-4{grid-column: span 4}
+    .col-8{grid-column: span 8}
+    @media (max-width:980px){.col-7,.col-5,.col-6,.col-4,.col-8{grid-column:1/-1}}
+    @media (max-width:760px){
+      .nav{align-items:flex-start; padding:10px 0}
+      .nav nav{font-size:.9rem}
+      .nav a{margin:4px 0 4px 14px}
+    }
+
+    .panel{padding:22px; border:1px solid var(--line); border-radius:16px; background:#ffffffdd; backdrop-filter: blur(2px)}
+    .muted{color:var(--muted)}
+    .credit{font-size:.85rem; color:var(--muted); margin-top:6px}
+
+    /* GALLERY */
+    .gallery{display:grid; grid-template-columns:repeat(12,1fr); gap:12px}
+    .g-item{position:relative; overflow:hidden; border-radius:14px; border:1px solid var(--line); background:#f9fafb}
+    .g-item figcaption{position:absolute; left:0; bottom:0; width:100%; background:linear-gradient(180deg, transparent, rgba(0,0,0,.65)); color:#fff; padding:38px 14px 10px; font-size:.95rem}
+    .span-12{grid-column:span 12}
+    .span-8{grid-column:span 8}
+    .span-6{grid-column:span 6}
+    .span-4{grid-column:span 4}
+    @media (max-width:980px){.span-8,.span-6,.span-4{grid-column:span 12}}
+
+    footer{padding:28px 0; color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header class="sticky">
+    <div class="container nav">
+      <div class="brand">Fernando Torterolo</div>
+      <nav aria-label="Main navigation">
+        <a href="#presentacion">Statement</a>
+        <a href="#bio">Bio</a>
+        <a href="#obra">Work</a>
+        <a href="#videos">Videos</a>
+        <a href="#prensa">Press</a>
+        <a href="#contacto">Contact</a>
+        <a class="language-link" href="/" lang="es" hreflang="es" aria-label="Ver el sitio web en español">ES</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Contemporary art from Valparaíso</h1>
+      <p>Expanded painting, urban patterns and found materials. Cartographies of discarded matter in dialogue with the port city.</p>
+      <a class="cta" href="#prensa">Press dossier</a>
+    </div>
+  </section>
+
+  <main>
+    <!-- STATEMENT + PORTRAIT -->
+    <section id="presentacion">
+      <div class="container grid">
+        <div class="col-7">
+          <h2>Artist Statement</h2>
+          <div class="panel">
+            <p>My practice emerges from the rhythm of the port city. I collect surfaces and signs—tickets, marks and cigarette butts—and submit them to a patient structure of minimal cuts, repetitions and layers. The image appears through persistence rather than gesture: cartography and noise superimposed on the same surface.</p>
+            <p class="muted">Lines, modules and constellations negotiate with chance. Black and white operate as silences upon a substrate that records movement, labour and the memory of the territory.</p>
+          </div>
+        </div>
+        <figure class="col-5">
+          <img src="../imagenes/Fernando2.JPG" alt="Portrait of the artist beside his work" loading="lazy">
+          <figcaption class="credit">Exhibition view — Valparaíso.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- BIOGRAPHY + PHOTO -->
+    <section id="bio">
+      <div class="container grid">
+        <figure class="col-5">
+          <img src="../imagenes/fotobiografia.JPG" alt="Fernando Torterolo in an exhibition space" loading="lazy">
+        </figure>
+        <div class="col-7">
+          <h2>Biography</h2>
+          <div class="panel">
+            <p><strong>Fernando Guillermo Torterolo Arancibia</strong> (Rancagua, Chile, 1973) is a visual artist whose career has been shaped by an exploration of painting and muralism in dialogue with the port city of Valparaíso. His practice is characterised by the use of discarded materials—cigarette butts, tickets, paper and urban fragments—which undergo processes of repetition, cutting and persistence, transforming the ephemeral into pictorial cartography.</p>
+            <p>He studied at the <em>Escuela de Bellas Artes de Valparaíso</em>, earning a Bachelor of Arts degree with a concentration in Painting (2010–2016). Between 2013 and 2014, he took part in the <em>Catalepsia Pintura Latente II</em> residency at Parque Cultural de Valparaíso, directed by Henry Serrano, Francisco Olivares and Justo Pastor Mellado. This experience consolidated his investigation of pictorial processes as records of the city.</p>
+            <p>He has exhibited at Galería Municipal de Valparaíso, Museo Lord Cochrane, Parque Cultural de Valparaíso and the Salón Nacional de Pintura de Viña del Mar, as well as in exhibitions in Rancagua and La Serena. In 2019 he presented <em>Pintura en Persistencia</em> at Parque Cultural de Valparaíso, a project that deepened his exploration of time, memory and surface. In 2023 he participated in the historical exhibition of graduates from the Escuela de Bellas Artes de Valparaíso.</p>
+            <p>His mural practice includes community projects and works in public spaces: Colegio Monte Castello (2011), Escuela E-286 in the Juan Montedónico neighbourhood (2012), <em>El descanso</em> in Agua Santa, Viña del Mar (2018), and participation in the FICVAL project <em>De Muro a Mural</em> on Cerro San Roque, Valparaíso (2018).</p>
+            <p>Alongside his artistic practice, he has collaborated on exhibitions and cultural projects at Parque Cultural de Valparaíso (PCdV) and CENTEX, part of Chile's Ministry of Cultures, Arts and Heritage. His work—described as a cartography of discarded matter and memory—connects the urban and the intimate, creating a language that moves between abstraction, repetition and the trace of time.</p>
+            <p class="muted">He currently lives and works in Valparaíso, Chile.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK INDEX -->
+    <section id="obra" style="scroll-margin-top:80px">
+      <div class="container">
+        <h2>Selected Work</h2>
+        <div class="panel">
+          <p>A selection of works developed through found materials and systems of social organisation, ranging from cigarette butts to waiting tickets and parking cards.</p>
+          <ul>
+            <li><a href="#transito">“TRANSITO” — Cartography of Discarded Materials</a></li>
+            <li><a href="#tiempo-espera">“Tiempo y Espera” <span lang="es">(Time and Waiting)</span></a></li>
+            <li><a href="#codigo-interno">“Código Interno” <span lang="es">(Internal Code)</span></a></li>
+          </ul>
+          <p class="muted">Each section can be linked to a specific QR code in an exhibition space, directing visitors to this page.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK 1: TRANSITO -->
+    <section id="transito" style="scroll-margin-top:80px">
+      <div class="container">
+        <h2>“TRANSITO” — Cartography of Discarded Materials</h2>
+        <div class="panel">
+          <p><strong>“TRANSITO” proposes a sustained reflection</strong> on the relationship between the individual and the urban landscape. Through the accumulation of cigarette butts, the work constructs a cartography that records presence in a specific time and place.</p>
+
+          <h3 style="margin:1rem 0 .5rem; font-size:1.1rem">The cigarette butt as a record</h3>
+          <p>Each cigarette butt operates as a container of information: genetic traces, wear and oxidation. It tells the story of an instant. The composition is formed by superimposing each element through what I call <strong>modular repetition</strong>, creating a cartography in which the cigarette butt assumes the role of a pictorial element.</p>
+
+          <h3 style="margin:1rem 0 .5rem; font-size:1.1rem">Layers, traces and displacement</h3>
+          <ul>
+            <li><strong>Lipstick:</strong> lipstick marks reveal experiences and female presences within the landscape.</li>
+            <li><strong>Stains:</strong> traces that point to gestures, encounters and accidents inscribed in a moment in time.</li>
+            <li><strong>Advertising:</strong> fragments that become a mirror of consumer society and of the ways in which we relate to information.</li>
+            <li><strong>Movement and memory:</strong> as ephemeral objects, cigarette butts travel from one place to another, carrying the memory of an instant.</li>
+          </ul>
+
+          <p class="muted" style="margin-top:.8rem">Direct work link: for example, a QR code can point to <code>https://fernandotorterolo.art/en/#transito</code>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK 2: Tiempo y Espera -->
+    <section id="tiempo-espera" style="scroll-margin-top:80px">
+      <div class="container">
+        <h2>“Tiempo y Espera” <span lang="es">(Time and Waiting)</span></h2>
+        <div class="panel">
+          <p>As I move through the city, I encounter the numbered waiting tickets used by shops and public-facing businesses to manage the flow of people. These small pieces of paper represent an organisational system that assigns a number and a moment in time, directing our experience within a broader social structure.</p>
+          <p>The work is constructed as a composition reflecting the different directions of global communication within that social system. The tickets become symbols of the interaction between the individual and society: minimal records that order, distribute and administer our presence in the city.</p>
+          <p class="muted" style="margin-top:.8rem">Direct work link: for example, a QR code can point to <code>https://fernandotorterolo.art/en/#tiempo-espera</code>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK 3: Código Interno -->
+    <section id="codigo-interno" style="scroll-margin-top:80px">
+      <div class="container">
+        <h2>“Código Interno” <span lang="es">(Internal Code)</span></h2>
+        <div class="panel">
+          <p>This work explores the relationship between the individual and the system, transferring the territory onto a plane through the use of <strong>parking cards</strong> as both material and visual code.</p>
+          <p>The work becomes a metaphor for the way the system conditions and controls us through numbers and codes. The repetition of the cards generates a visual pattern that reinforces the idea of the system's omnipresence in our lives.</p>
+          <p>At the same time, the work invites reflection on how we submit to these codes and numbers without questioning them, accepting their logic as a natural part of the urban landscape and of our everyday experience.</p>
+          <p class="muted" style="margin-top:.8rem">Direct work link: for example, a QR code can point to <code>https://fernandotorterolo.art/en/#codigo-interno</code>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK 4: Ópticos -->
+    <section id="opticos" style="scroll-margin-top:80px">
+      <div class="container">
+        <h2>“Ópticos” <span lang="es">(Optical Works)</span></h2>
+        <div class="panel">
+          <p>Created in 2014, these works emerged from the need to give greater visual value to the artistic process. The process begins with the collection of cigarette butts, which are then transferred to the support, always from a perspective connected to painting and its expressive possibilities.</p>
+          <p>This exercise arises from observing unsanitary materials and from the intention to grant them a different aesthetic condition. The work considers how elements treated as waste can be reorganised to acquire new visual and symbolic readings.</p>
+          <p class="muted" style="margin-top:.8rem">Direct work link: for example, a QR code can point to <code>https://fernandotorterolo.art/en/#opticos</code>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GENERAL PHOTO GALLERY -->
+    <section id="fotos">
+      <div class="container">
+        <h2>Photographs</h2>
+        <div class="gallery">
+          <figure class="g-item span-12"><img src="../imagenes/muestra4.JPG" alt="Exhibition view" loading="lazy"></figure>
+          <figure class="g-item span-8"><img src="../imagenes/obra1.JPG" alt="Artwork 1" loading="lazy"></figure>
+          <figure class="g-item span-4"><img src="../imagenes/obra2.JPG" alt="Artwork 2" loading="lazy"></figure>
+          <figure class="g-item span-6"><img src="../imagenes/obra.JPG" alt="Artwork 3" loading="lazy"></figure>
+          <figure class="g-item span-6"><img src="../imagenes/muestra3.JPG" alt="Artwork detail" loading="lazy"></figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="videos">
+      <div class="container">
+        <h2>Videos</h2>
+        <div class="grid" style="gap:18px">
+          <div class="col-6">
+            <div class="panel" style="position:relative; width:100%; aspect-ratio:16/9; overflow:hidden; border-radius:12px;">
+              <iframe src="https://www.youtube.com/embed/rTzFAy1-BFE" title="Interview — ElementalTV" frameborder="0" allowfullscreen style="position:absolute; inset:0; width:100%; height:100%;"></iframe>
+            </div>
+            <div class="credit">Interview — ElementalTV</div>
+          </div>
+
+          <div class="col-6">
+            <div class="panel" style="position:relative; width:100%; aspect-ratio:16/9; overflow:hidden; border-radius:12px;">
+              <iframe src="https://www.youtube.com/embed/lPqijekU4Kc" title="Appearance — La Matriz Cultural" frameborder="0" allowfullscreen style="position:absolute; inset:0; width:100%; height:100%;"></iframe>
+            </div>
+            <div class="credit">Appearance — La Matriz Cultural</div>
+          </div>
+
+          <div class="col-6">
+            <div class="panel" style="position:relative; width:100%; aspect-ratio:16/9; overflow:hidden; border-radius:12px;">
+              <iframe src="https://www.youtube.com/embed/sasBYJWnUvo" title="Additional appearance — La Matriz Cultural" frameborder="0" allowfullscreen style="position:absolute; inset:0; width:100%; height:100%;"></iframe>
+            </div>
+            <div class="credit">Additional appearance — La Matriz Cultural</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prensa">
+      <div class="container grid">
+        <div class="col-8">
+          <h2>Press Dossier</h2>
+          <div class="panel">
+            <ul>
+              <li><strong>Based in:</strong> Valparaíso, Chile</li>
+              <li><strong>Education:</strong> Bachelor of Arts (Painting). PCdV residency, <em>Catalepsia Pintura Latente II</em>.</li>
+              <li><strong>Selected exhibitions:</strong> Salón de Alumnos XXXV–XXXIX (Galería Municipal de Valparaíso); Museo Lord Cochrane; Salón Nacional de Pintura XXXVIII (Viña del Mar); <em>Pintura en Persistencia</em> cycle (PCdV, 2019); historical exhibition of graduates (2023).</li>
+              <li><strong>Murals:</strong> Colegio Monte Castello (2011), Escuela E-286 (2012), <em>El descanso</em> (2018), FICVAL <em>De Muro a Mural</em> (2018).</li>
+              <li><strong>Press contact:</strong> <a href="mailto:Fernandotorterolo73arte@gmail.com">Fernandotorterolo73arte@gmail.com</a> · <a href="tel:+56946562365">+56 9 4656 2365</a></li>
+            </ul>
+            <p style="margin-top:10px"><a href="#contacto">Request the PDF dossier and high-resolution photographs</a></p>
+          </div>
+        </div>
+        <figure class="col-4">
+          <img src="../imagenes/fondo2.JPG" alt="Urban texture from Valparaíso" loading="lazy">
+          <figcaption class="credit">Urban textures — Valparaíso.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contacto">
+      <div class="container grid">
+        <div class="col-6">
+          <h2>Contact</h2>
+          <div class="panel">
+            <p><strong>Email:</strong> <a href="mailto:Fernandotorterolo73arte@gmail.com">Fernandotorterolo73arte@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+56946562365">+56 9 4656 2365</a></p>
+          </div>
+        </div>
+        <figure class="col-6">
+          <img src="../imagenes/fondo.JPG" alt="Material detail from an artwork" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- FEATURED INTERVIEW -->
+    <section id="video">
+      <div class="container">
+        <h2>Featured Interview / Video</h2>
+        <div class="panel" style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:16px;">
+          <iframe src="https://www.youtube.com/embed/rTzFAy1-BFE" title="ElementalTV interview with Fernando Torterolo" frameborder="0" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="text-align:center; font-size:.9rem; color:#555;">
+      <p>© 2025 Fernando Torterolo. All rights reserved.</p>
+      <p>Website by <a href="https://www.fitogirolami.art" target="_blank" rel="noopener noreferrer" style="color:#111; font-weight:600;">fitogirolami.art</a></p>
+    </div>
+  </footer>
+</body>
+</html>
